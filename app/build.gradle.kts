@@ -1,6 +1,10 @@
 plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.jetbrains.kotlin.android)
+  alias(libs.plugins.compose.compiler)
+  alias(libs.plugins.hilt)
+  alias(libs.plugins.kapt)
+  alias(libs.plugins.ksp)
 }
 
 android {
@@ -56,11 +60,28 @@ dependencies {
   implementation(libs.androidx.ui.graphics)
   implementation(libs.androidx.ui.tooling.preview)
   implementation(libs.androidx.material3)
+  
+  implementation(libs.lifecycle.viewmodel.compose)
+  implementation(libs.splashscreen)
+
+  implementation(libs.room.ktx)
+  implementation(libs.room.runtime)
+  annotationProcessor(libs.room.compiler)
+  ksp(libs.room.compiler)
+
+  implementation(libs.hilt.navigation.compose)
+  implementation(libs.hilt.android)
+  kapt(libs.hilt.compiler)
+
   testImplementation(libs.junit)
+  testImplementation(libs.hilt.android.testing)
+  kaptTest(libs.hilt.compiler)
+
   androidTestImplementation(libs.androidx.junit)
   androidTestImplementation(libs.androidx.espresso.core)
   androidTestImplementation(platform(libs.androidx.compose.bom))
   androidTestImplementation(libs.androidx.ui.test.junit4)
+
   debugImplementation(libs.androidx.ui.tooling)
   debugImplementation(libs.androidx.ui.test.manifest)
 }
