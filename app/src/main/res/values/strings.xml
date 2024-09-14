@@ -1,3 +1,9 @@
 <resources>
-  <string name="app_name">PinManager</string>
+  <string name="app_name">Pin Manager</string>
+
+  <string name="pin_manager">Pin manager</string>
+  <string name="add_new_pin">Add new pin</string>
+
+  <string name="back">Back</string>
+
 </resources>

@@ -1,4 +1,4 @@
-package com.kmcoding.pinmanager.ui
+package com.kmcoding.pinmanager.ui.home
 
 import androidx.lifecycle.ViewModel
 import com.kmcoding.pinmanager.domain.repository.PinRepository
