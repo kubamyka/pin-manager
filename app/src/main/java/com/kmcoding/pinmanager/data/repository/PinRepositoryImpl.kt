@@ -13,7 +13,7 @@ class PinRepositoryImpl
     ) : PinRepository {
         override suspend fun getAllPins(): Flow<List<Pin>> = pinDao.getAllPins()
 
-        override suspend fun getPin(id: Int): Flow<Pin> = pinDao.getPin(id = id)
+        override suspend fun getPin(name: String): Flow<Pin?> = pinDao.getPin(name = name)
 
         override suspend fun insertPin(pin: Pin) {
             pinDao.insert(pin = pin)

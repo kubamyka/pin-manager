@@ -14,8 +14,8 @@ interface PinDao {
     @Query("SELECT * FROM pins ORDER BY name ASC")
     fun getAllPins(): Flow<List<Pin>>
 
-    @Query("SELECT * FROM pins WHERE id = :id")
-    fun getPin(id: Int): Flow<Pin>
+    @Query("SELECT * FROM pins WHERE name = :name")
+    fun getPin(name: String): Flow<Pin?>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(pin: Pin)

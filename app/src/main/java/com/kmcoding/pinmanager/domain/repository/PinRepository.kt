@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 interface PinRepository {
     suspend fun getAllPins(): Flow<List<Pin>>
 
-    suspend fun getPin(id: Int): Flow<Pin>
+    suspend fun getPin(name: String): Flow<Pin?>
 
     suspend fun insertPin(pin: Pin)
 

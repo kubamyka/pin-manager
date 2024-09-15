@@ -1,5 +1,12 @@
 package com.kmcoding.pinmanager.ui.nav
 
+import androidx.compose.animation.AnimatedContentTransitionScope
+import androidx.compose.animation.core.EaseIn
+import androidx.compose.animation.core.EaseOut
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -24,8 +31,36 @@ fun PinNavHost(
             HomeScreen()
         }
 
-        composable(route = NavScreen.AddNewPin.name) {
-            AddNewPinScreen()
+        composable(
+            route = NavScreen.AddNewPin.name,
+            enterTransition = {
+                fadeIn(
+                    animationSpec =
+                        tween(
+                            300,
+                            easing = LinearEasing,
+                        ),
+                ) +
+                    slideIntoContainer(
+                        animationSpec = tween(300, easing = EaseIn),
+                        towards = AnimatedContentTransitionScope.SlideDirection.Start,
+                    )
+            },
+            exitTransition = {
+                fadeOut(
+                    animationSpec =
+                        tween(
+                            300,
+                            easing = LinearEasing,
+                        ),
+                ) +
+                    slideOutOfContainer(
+                        animationSpec = tween(300, easing = EaseOut),
+                        towards = AnimatedContentTransitionScope.SlideDirection.End,
+                    )
+            },
+        ) {
+            AddNewPinScreen(navigateBack = { navController.navigateUp() })
         }
     }
 }

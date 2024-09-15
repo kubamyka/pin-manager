@@ -1,9 +1,18 @@
 <resources>
-  <string name="app_name">Pin Manager</string>
+  <string name="app_name">PIN Manager</string>
 
-  <string name="pin_manager">Pin manager</string>
-  <string name="add_new_pin">Add new pin</string>
+  <string name="pin_manager">PIN manager</string>
+  <string name="add_new_pin">Add new PIN</string>
+
+  <string name="pin_name">PIN name</string>
+  <string name="pin_code">PIN code</string>
 
   <string name="back">Back</string>
+  <string name="save">Save</string>
+  <string name="replace">Replace</string>
+  <string name="cancel">Cancel</string>
+  <string name="warning">Warning</string>
+
+  <string name="dialog_message_replace_pin">PIN with entered name already exists in database. Do you want to replace it?</string>
 
 </resources>
