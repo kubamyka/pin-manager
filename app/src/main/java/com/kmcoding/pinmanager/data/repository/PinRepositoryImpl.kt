@@ -11,7 +11,7 @@ class PinRepositoryImpl
     constructor(
         private val pinDao: PinDao,
     ) : PinRepository {
-        override suspend fun getAllPins(): Flow<List<Pin>> = pinDao.getAllPins()
+        override fun getAllPins(): Flow<List<Pin>> = pinDao.getAllPins()
 
         override suspend fun getPin(name: String): Flow<Pin?> = pinDao.getPin(name = name)
 

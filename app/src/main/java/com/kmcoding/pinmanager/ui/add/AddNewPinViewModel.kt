@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.receiveAsFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 import kotlin.random.Random
@@ -61,6 +62,6 @@ class AddNewPinViewModel
         }
 
         fun updatePinWithConflict(value: Pin?) {
-            _pinWithConflict.value = value
+            _pinWithConflict.update { value }
         }
     }

@@ -42,9 +42,9 @@ fun AddNewPinScreen(
     viewModel: AddNewPinViewModel = hiltViewModel(),
 ) {
     val pinWithConflict by viewModel.pinWithConflict.collectAsStateWithLifecycle()
-    var text by rememberSaveable { mutableStateOf("") }
     val coroutineScope = rememberCoroutineScope()
     val lifecycleOwner = LocalLifecycleOwner.current
+    var text by rememberSaveable { mutableStateOf("") }
 
     LaunchedEffect(lifecycleOwner.lifecycle) {
         lifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -89,7 +89,8 @@ fun AddNewPinScreen(
             Text(text = stringResource(id = R.string.save))
         }
 
-        if (pinWithConflict != null) {
+        val pinWithConflictState = pinWithConflict
+        if (pinWithConflictState != null) {
             PinAlertDialog(
                 icon = Icons.Default.Warning,
                 iconContentDescription = stringResource(id = R.string.warning),
@@ -99,7 +100,7 @@ fun AddNewPinScreen(
                 dismissButtonText = stringResource(id = R.string.cancel),
                 onConfirmation = {
                     coroutineScope.launch {
-                        viewModel.savePinToDatabase(text, pinWithConflict?.id)
+                        viewModel.savePinToDatabase(text, pinWithConflictState.id)
                     }
                 },
                 onDismissRequest = {

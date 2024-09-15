@@ -12,7 +12,11 @@
   <string name="replace">Replace</string>
   <string name="cancel">Cancel</string>
   <string name="warning">Warning</string>
+  <string name="delete">Delete</string>
 
   <string name="dialog_message_replace_pin">PIN with entered name already exists in database. Do you want to replace it?</string>
+  <string name="dialog_message_delete_pin">Are you sure you want to delete \"%s\" PIN"?</string>
+
+  <string name="empty_pins">No PIN codes to display, create some</string>
 
 </resources>

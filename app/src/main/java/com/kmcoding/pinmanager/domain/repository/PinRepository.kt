@@ -4,7 +4,7 @@ import com.kmcoding.pinmanager.domain.Pin
 import kotlinx.coroutines.flow.Flow
 
 interface PinRepository {
-    suspend fun getAllPins(): Flow<List<Pin>>
+    fun getAllPins(): Flow<List<Pin>>
 
     suspend fun getPin(name: String): Flow<Pin?>
 

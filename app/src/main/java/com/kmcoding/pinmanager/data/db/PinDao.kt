@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface PinDao {
-    @Query("SELECT * FROM pins ORDER BY name ASC")
+    @Query("SELECT * FROM pins ORDER BY LOWER(name) ASC")
     fun getAllPins(): Flow<List<Pin>>
 
     @Query("SELECT * FROM pins WHERE name = :name")
