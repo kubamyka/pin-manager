@@ -9,4 +9,8 @@ object FakeDataSource {
             Pin(id = 2, name = "PIN code for testing purpose", code = "654321"),
             Pin(id = 3, name = "Third PIN code", code = "333333"),
         )
+
+    fun getFakePinByName(name: String): Pin? = fakePins.firstOrNull { it.name == name }
+
+    fun getFakePinByCode(code: String): Pin? = fakePins.firstOrNull { it.code == code }
 }

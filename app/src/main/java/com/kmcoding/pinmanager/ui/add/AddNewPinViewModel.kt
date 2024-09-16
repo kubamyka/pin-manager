@@ -26,14 +26,16 @@ class AddNewPinViewModel
         private val _navigateBackChannel = Channel<Boolean>()
         var navigateBackChannel = _navigateBackChannel.receiveAsFlow()
 
+        val pinCodeLength = 6
+
         fun updatePinWithConflict(value: Pin?) {
             _pinWithConflict.update { value }
         }
 
         /**
          * Checks if entered PIN name is unique.
-         * If yes, then PIN item is being saved into database.
-         * If no, then user should decide if he wants to override PIN item in database.
+         * If yes, then PIN object is being saved into database.
+         * If no, then user should decide if he wants to replace PIN object in database.
          *
          * @param name PIN name, which should be unique
          */
@@ -55,7 +57,7 @@ class AddNewPinViewModel
         ) {
             val pin =
                 if (id != null) {
-                    // Replaces current PIN item in database with new one
+                    // Replaces current PIN object in database with new one
                     Pin(name = name, code = generateUniquePinCode(), id = id)
                 } else {
                     Pin(name = name, code = generateUniquePinCode())
@@ -64,25 +66,37 @@ class AddNewPinViewModel
             _navigateBackChannel.send(true)
         }
 
-        /**
-         * Generates unique PIN code with 6 digits
-         */
         private suspend fun generateUniquePinCode(): String {
-            val pinCodeLength = 6
             var pinCode = ""
 
             // Generates PIN code till it's unique
             while (pinCode.isEmpty()) {
-                repeat(pinCodeLength) {
-                    val randomNumber = Random.nextInt(10)
-                    pinCode = pinCode.plus(randomNumber)
-                }
-
-                val pin = pinRepository.getPinByCode(pinCode).firstOrNull()
-                if (pin != null) {
+                pinCode = generatePinCode()
+                if (!isPinCodeUnique(pinCode)) {
                     // PIN code already exists in database, generates the new one
                     pinCode = ""
                 }
+            }
+
+            return pinCode
+        }
+
+        /**
+         * Checks if PIN code has not already been used in another PIN object
+         *
+         * @param pinCode generated PIN code
+         */
+        suspend fun isPinCodeUnique(pinCode: String) = pinRepository.getPinByCode(pinCode).firstOrNull() == null
+
+        /**
+         * Generates a PIN code of randomly selected 6 digits
+         */
+        fun generatePinCode(): String {
+            var pinCode = ""
+
+            repeat(pinCodeLength) {
+                val randomNumber = Random.nextInt(10)
+                pinCode = pinCode.plus(randomNumber)
             }
 
             return pinCode

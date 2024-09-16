@@ -15,6 +15,7 @@ hiltNavigationVersion = "1.2.0"
 lifecycleViewmodelComposeVersion = "2.8.5"
 roomVersion = "2.6.1"
 splashscreenVersion = "1.0.1"
+coroutinesTestVersion = "1.8.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -41,6 +42,7 @@ room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomVersion" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomVersion" }
 splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashscreenVersion" }
+coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTestVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
