@@ -10,10 +10,10 @@ App uses:
 
 ## Screenshots
 <p>
-  <img src="https://github.com/kubamyka/pin-manager/blob/master/screenshots/pinList.jpg" width="240" title="PIN list">
-  <img src="https://github.com/kubamyka/pin-manager/blob/master/screenshots/deletePin.jpg" width="240" title="Delete PIN">
-  <img src="https://github.com/kubamyka/pin-manager/blob/master/screenshots/addPin.jpg" width="240" title="Add PIN">
-  <img src="https://github.com/kubamyka/pin-manager/blob/master/screenshots/replacePin.jpg" width="240" title="Replace PIN">
+  <img src="https://github.com/kubamyka/pin-manager/blob/master/screenshots/pinList.jpg" width="200" title="PIN list">
+  <img src="https://github.com/kubamyka/pin-manager/blob/master/screenshots/deletePin.jpg" width="200" title="Delete PIN">
+  <img src="https://github.com/kubamyka/pin-manager/blob/master/screenshots/addPin.jpg" width="200" title="Add PIN">
+  <img src="https://github.com/kubamyka/pin-manager/blob/master/screenshots/replacePin.jpg" width="200" title="Replace PIN">
 </p>
 
 ## Features
