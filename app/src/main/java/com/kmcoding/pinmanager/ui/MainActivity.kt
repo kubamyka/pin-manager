@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.kmcoding.pinmanager.ui.content.PinManagerApp
 import com.kmcoding.pinmanager.ui.theme.PinManagerTheme
 import dagger.hilt.android.AndroidEntryPoint
 

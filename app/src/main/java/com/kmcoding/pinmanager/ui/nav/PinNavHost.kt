@@ -14,8 +14,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.kmcoding.pinmanager.ui.add.AddNewPinScreen
-import com.kmcoding.pinmanager.ui.home.HomeScreen
+import com.kmcoding.pinmanager.ui.screens.add.AddNewPinScreen
+import com.kmcoding.pinmanager.ui.screens.home.HomeScreen
 
 @Composable
 fun PinNavHost(

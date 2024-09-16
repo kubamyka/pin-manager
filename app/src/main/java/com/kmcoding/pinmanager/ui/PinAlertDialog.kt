@@ -1,4 +1,4 @@
-package com.kmcoding.pinmanager.ui.util
+package com.kmcoding.pinmanager.ui
 
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon

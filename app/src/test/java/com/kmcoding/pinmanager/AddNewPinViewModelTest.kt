@@ -2,7 +2,7 @@ package com.kmcoding.pinmanager
 
 import com.kmcoding.pinmanager.data.source.FakeDataSource.fakePins
 import com.kmcoding.pinmanager.fake.FakePinRepositoryImpl
-import com.kmcoding.pinmanager.ui.add.AddNewPinViewModel
+import com.kmcoding.pinmanager.ui.screens.add.AddNewPinViewModel
 import com.kmcoding.pinmanager.util.MainDispatcherRule
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch

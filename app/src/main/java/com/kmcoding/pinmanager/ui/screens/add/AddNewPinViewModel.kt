@@ -1,4 +1,4 @@
-package com.kmcoding.pinmanager.ui.add
+package com.kmcoding.pinmanager.ui.screens.add
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

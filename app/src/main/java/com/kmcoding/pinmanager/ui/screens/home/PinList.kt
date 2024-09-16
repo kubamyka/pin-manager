@@ -1,4 +1,4 @@
-package com.kmcoding.pinmanager.ui.home
+package com.kmcoding.pinmanager.ui.screens.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

@@ -1,4 +1,4 @@
-package com.kmcoding.pinmanager.ui.add
+package com.kmcoding.pinmanager.ui.screens.add
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -30,7 +30,7 @@ import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.repeatOnLifecycle
 import com.kmcoding.pinmanager.R
-import com.kmcoding.pinmanager.ui.util.PinAlertDialog
+import com.kmcoding.pinmanager.ui.PinAlertDialog
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

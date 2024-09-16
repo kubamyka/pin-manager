@@ -1,4 +1,4 @@
-package com.kmcoding.pinmanager.ui.content
+package com.kmcoding.pinmanager.ui
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding

@@ -1,4 +1,4 @@
-package com.kmcoding.pinmanager.ui.home
+package com.kmcoding.pinmanager.ui.screens.home
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.kmcoding.pinmanager.R
-import com.kmcoding.pinmanager.ui.util.PinAlertDialog
+import com.kmcoding.pinmanager.ui.PinAlertDialog
 import kotlinx.coroutines.launch
 
 @Composable
