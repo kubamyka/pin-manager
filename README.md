@@ -21,7 +21,7 @@ App uses:
 ### Main PIN list
 Package: [com.kmcoding.pinmanager.ui.home](https://github.com/kubamyka/pin-manager/tree/master/app/src/main/java/com/kmcoding/pinmanager/ui/home)
 
-This screen shows the list of PIN objects fetched from local Room database. Each PIN object displays lock icon, name, code and delete button.
+This screen shows the list of PIN objects fetched from local Room database. List is sorted alphabetically by PIN name. Each PIN object displays lock icon, name, code and delete button.
 
 ### PIN object creator
 Package: [com.kmcoding.pinmanager.ui.add](https://github.com/kubamyka/pin-manager/tree/master/app/src/main/java/com/kmcoding/pinmanager/ui/add)
