@@ -31,7 +31,7 @@ fun HomeScreen(
 
     Box(modifier = modifier.fillMaxSize()) {
         if (pins.isEmpty()) {
-            Box(contentAlignment = Alignment.Center) {
+            Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize()) {
                 Text(text = stringResource(id = R.string.empty_pins))
             }
         } else {

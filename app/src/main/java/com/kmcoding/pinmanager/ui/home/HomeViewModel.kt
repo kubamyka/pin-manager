@@ -2,7 +2,7 @@ package com.kmcoding.pinmanager.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.kmcoding.pinmanager.domain.Pin
+import com.kmcoding.pinmanager.domain.model.Pin
 import com.kmcoding.pinmanager.domain.repository.PinRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

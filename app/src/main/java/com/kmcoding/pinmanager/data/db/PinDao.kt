@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.kmcoding.pinmanager.domain.Pin
+import com.kmcoding.pinmanager.domain.model.Pin
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -15,7 +15,10 @@ interface PinDao {
     fun getAllPins(): Flow<List<Pin>>
 
     @Query("SELECT * FROM pins WHERE name = :name")
-    fun getPin(name: String): Flow<Pin?>
+    fun getPinByName(name: String): Flow<Pin?>
+
+    @Query("SELECT * FROM pins WHERE code = :code")
+    fun getPinByCode(code: String): Flow<Pin?>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(pin: Pin)

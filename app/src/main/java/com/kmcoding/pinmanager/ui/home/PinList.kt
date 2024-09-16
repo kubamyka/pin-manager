@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.kmcoding.pinmanager.data.source.FakeDataSource.fakePins
-import com.kmcoding.pinmanager.domain.Pin
+import com.kmcoding.pinmanager.domain.model.Pin
 
 @Composable
 fun PinList(

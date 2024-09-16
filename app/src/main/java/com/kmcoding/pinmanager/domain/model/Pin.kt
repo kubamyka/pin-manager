@@ -1,4 +1,4 @@
-package com.kmcoding.pinmanager.domain
+package com.kmcoding.pinmanager.domain.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
