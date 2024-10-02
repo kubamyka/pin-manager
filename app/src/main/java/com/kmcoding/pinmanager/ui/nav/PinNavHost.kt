@@ -10,16 +10,19 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.kmcoding.pinmanager.ui.screens.add.AddNewPinScreen
 import com.kmcoding.pinmanager.ui.screens.home.HomeScreen
+import com.kmcoding.pinmanager.ui.screens.home.HomeViewModel
 
 @Composable
 fun PinNavHost(
     modifier: Modifier = Modifier,
+    homeViewModel: HomeViewModel = hiltViewModel(),
     navController: NavHostController = rememberNavController(),
 ) {
     NavHost(
@@ -28,7 +31,7 @@ fun PinNavHost(
         modifier = modifier.fillMaxSize(),
     ) {
         composable(route = NavScreen.Home.name) {
-            HomeScreen()
+            HomeScreen(viewModel = homeViewModel)
         }
 
         composable(

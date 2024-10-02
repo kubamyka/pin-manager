@@ -14,7 +14,7 @@ interface PinDao {
     @Query("SELECT * FROM pins ORDER BY LOWER(name) ASC")
     fun getAllPins(): Flow<List<Pin>>
 
-    @Query("SELECT * FROM pins WHERE name = :name")
+    @Query("SELECT * FROM pins WHERE LOWER(name) = LOWER(:name)")
     fun getPinByName(name: String): Flow<Pin?>
 
     @Query("SELECT * FROM pins WHERE code = :code")
